@@ -11,11 +11,8 @@ export default function Team() {
           The team
         </span>
         <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[2.6rem] sm:leading-[1.15]">
-          Built by four people at SLIIT
+          Built by four people
         </h2>
-        <p className="mt-4 text-lg text-ink-500">
-          Research project RP-SE-009 — one agent each, and one system between them.
-        </p>
       </Reveal>
 
       <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

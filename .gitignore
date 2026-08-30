@@ -10,3 +10,5 @@ out/
 # photos people drop in are not.
 incoming-photos/*
 !incoming-photos/README.txt
+
+.vercel
