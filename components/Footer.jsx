@@ -17,8 +17,8 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-4 text-sm leading-relaxed text-ink-400">
-              Self-optimizing AI-agentic development. Research project RP-SE-009,
-              Sri Lanka Institute of Information Technology.
+              Self-optimizing AI-agentic development. One tool from the interview
+              to the running application.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-12 border-t border-slate-200 pt-6 text-xs text-ink-400">
-          © {new Date().getFullYear()} RP-SE-009 · SLIIT. Screenshots captured from the
+          © {new Date().getFullYear()} AgentForge. Screenshots captured from the
           running system.
         </p>
       </div>

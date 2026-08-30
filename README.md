@@ -1,7 +1,7 @@
 # AgentForge — website
 
 The marketing site for **AgentForge**, the self-optimizing AI-agentic
-development system built as research project RP-SE-009 at SLIIT.
+development system.
 
 Describe an app, and AgentForge interviews you, turns the answers into a
 traceable specification, writes the application, drives a real browser over
@@ -30,7 +30,7 @@ or from Vercel.
 | How it works | The six stages, each with a screenshot of that stage running |
 | Screens | Six screenshots captured from the running system on 30 August 2026 |
 | Download | The Windows installer, and the toolchain it sets up on first run |
-| Team | The four people on RP-SE-009 |
+| Team | The four people who built it |
 
 Every animation is CSS and every one of them stops under
 `prefers-reduced-motion: reduce`. Nothing on the page plays sound.

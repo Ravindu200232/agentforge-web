@@ -108,21 +108,17 @@ export const TEAM = [
   {
     slug: 'ravindu-subasingha',
     name: 'Ravindu Subasingha',
-    role: 'Group leader · Builder and deployment agents',
   },
   {
     slug: 'nimthera-gunasena',
     name: 'Nimthera Gunasena',
-    role: 'Requirements and SRS agent',
   },
   {
     slug: 'hamna-rahmathullah-hakeem',
     name: 'Hamna Rahmathullah Hakeem',
-    role: 'Quality assurance and testing agent',
   },
   {
     slug: 'malith-bandara',
     name: 'Malith Bandara',
-    role: 'Studio interface and research',
   },
 ]

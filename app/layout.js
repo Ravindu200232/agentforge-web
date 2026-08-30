@@ -22,7 +22,6 @@ export const metadata = {
     'AgentForge', 'AI agents', 'software development', 'code generation',
     'automated testing', 'deployment', 'SRS', 'Ollama', 'Next.js',
   ],
-  authors: [{ name: 'RP-SE-009, SLIIT' }],
   openGraph: {
     title: 'AgentForge — self-optimizing AI-agentic development',
     description:

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Reveal from './Reveal'
 import { TEAM } from './site'
 
-/** The four people behind RP-SE-009. */
+/** The four people who built AgentForge. */
 export default function Team() {
   return (
     <section id="team" className="mx-auto max-w-7xl px-5 py-24 sm:px-8">
@@ -39,9 +39,6 @@ export default function Team() {
               <figcaption className="mt-6">
                 <p className="font-display text-lg font-bold tracking-tight text-ink-900">
                   {person.name}
-                </p>
-                <p className="mx-auto mt-1.5 max-w-[15rem] text-sm leading-snug text-ink-400">
-                  {person.role}
                 </p>
               </figcaption>
             </figure>
