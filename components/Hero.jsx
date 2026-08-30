@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Button from './Button'
 import { Download, Github, Windows } from './Icons'
-import { PIPELINE, DOWNLOAD_URL, SOURCE_URL } from './site'
+import { PIPELINE, DOWNLOAD_URL, SOURCE_URL, asset } from './site'
 
 /**
  * The pipeline that runs under the headline.
@@ -135,7 +135,7 @@ export default function Hero() {
           <div className="relative rounded-[26px] border border-slate-200 bg-gradient-to-br from-white to-slate-50 p-5 shadow-2xl shadow-slate-300/40 sm:p-7">
             <div className="mb-5 flex items-center gap-3">
               <span className="af-float relative block h-11 w-11 overflow-hidden rounded-full ring-1 ring-slate-200">
-                <Image src="/agentforge-logo.png" alt="" fill sizes="44px" className="object-cover" priority />
+                <Image src={asset('/agentforge-logo.png')} alt="" fill sizes="44px" className="object-cover" priority />
               </span>
               <div>
                 <p className="font-display text-sm font-bold tracking-tight text-ink-900">

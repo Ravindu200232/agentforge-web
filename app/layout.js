@@ -1,5 +1,6 @@
 import { Inter, Bricolage_Grotesque } from 'next/font/google'
 import './globals.css'
+import { asset } from '@/components/site'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -27,9 +28,9 @@ export const metadata = {
     description:
       'One tool from the interview to the running application. Describe it, and watch every useful step.',
     type: 'website',
-    images: ['/screenshots/01-studio-home.jpg'],
+    images: [asset('/screenshots/01-studio-home.jpg')],
   },
-  icons: { icon: '/agentforge-logo.png' },
+  icons: { icon: asset('/agentforge-logo.png') },
 }
 
 export const viewport = {

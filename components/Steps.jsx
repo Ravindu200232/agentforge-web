@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Reveal from './Reveal'
-import { STEPS } from './site'
+import { STEPS, asset } from './site'
 
 /**
  * The six stages, alternating side to side.
@@ -55,7 +55,7 @@ export default function Steps() {
                   <div className={flipped ? 'lg:order-1' : ''}>
                     <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition-transform duration-500 hover:-translate-y-1">
                       <Image
-                        src={`/screenshots/${step.shot}.jpg`}
+                        src={asset(`/screenshots/${step.shot}.jpg`)}
                         alt={`AgentForge — ${step.title}`}
                         width={1800}
                         height={1125}

@@ -12,6 +12,8 @@ const nextConfig = {
   trailingSlash: true,
   basePath,
   assetPrefix: basePath || undefined,
+  // Read by asset() for the image sources next/image will not prefix.
+  env: { NEXT_PUBLIC_BASE_PATH: basePath },
 }
 
 export default nextConfig

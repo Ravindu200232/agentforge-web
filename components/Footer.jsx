@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Github, Download } from './Icons'
-import { NAV, SOURCE_URL, DOWNLOAD_URL } from './site'
+import { NAV, SOURCE_URL, DOWNLOAD_URL, asset } from './site'
 
 export default function Footer() {
   return (
@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="max-w-sm">
             <div className="flex items-center gap-3">
               <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-slate-200">
-                <Image src="/agentforge-logo.png" alt="" fill sizes="40px" className="object-cover" />
+                <Image src={asset('/agentforge-logo.png')} alt="" fill sizes="40px" className="object-cover" />
               </span>
               <span className="font-display text-lg font-bold tracking-tight text-ink-900">
                 AgentForge

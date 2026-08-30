@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Button from './Button'
 import { Download, Menu, Close } from './Icons'
-import { NAV, DOWNLOAD_URL } from './site'
+import { NAV, DOWNLOAD_URL, asset } from './site'
 
 /** A transparent bar that gains a border and a blur once the page moves. */
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
       <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a href="#top" className="flex items-center gap-3">
           <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-slate-200 shadow-sm">
-            <Image src="/agentforge-logo.png" alt="" fill sizes="40px" className="object-cover" priority />
+            <Image src={asset('/agentforge-logo.png')} alt="" fill sizes="40px" className="object-cover" priority />
           </span>
           <span className="font-display text-lg font-bold tracking-tight text-ink-900">
             AgentForge

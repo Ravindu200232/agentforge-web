@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { SCREENS } from './site'
+import { SCREENS, asset } from './site'
 
 /** The screenshot browser: one tab per surface of the Studio. */
 export default function Gallery() {
@@ -55,7 +55,7 @@ export default function Gallery() {
 
           <Image
             key={shot.id}
-            src={`/screenshots/${shot.id}.jpg`}
+            src={asset(`/screenshots/${shot.id}.jpg`)}
             alt={shot.caption}
             width={1800}
             height={1125}

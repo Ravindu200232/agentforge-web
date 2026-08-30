@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Reveal from './Reveal'
-import { TEAM } from './site'
+import { TEAM, asset } from './site'
 
 /** The four people who built AgentForge. */
 export default function Team() {
@@ -27,7 +27,7 @@ export default function Team() {
                 />
                 <span className="relative block h-full w-full overflow-hidden rounded-full ring-4 ring-white shadow-lg shadow-slate-300/50">
                   <Image
-                    src={`/team/${person.slug}.jpg`}
+                    src={asset(`/team/${person.slug}.jpg`)}
                     alt={person.name}
                     fill
                     sizes="160px"

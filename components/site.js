@@ -5,6 +5,17 @@
  * AgentForge generated on 30 August 2026. Nothing here is rounded up.
  */
 
+/**
+ * Prefix for everything under public/.
+ *
+ * GitHub Pages serves the site from a repository sub-path. `basePath` alone
+ * does not cover it: next/image with `unoptimized` passes the src through
+ * untouched, so the prefix has to be applied here.
+ */
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+
+export const asset = (path) => `${BASE}${path}`
+
 export const REPO = {
   owner: 'Ravindu200232',
   name: 'agentforge-web',
