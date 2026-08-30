@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-bricolage), var(--font-inter), ui-sans-serif, sans-serif;
+
+  --color-ink-900: #0b1020;
+  --color-ink-700: #1e293b;
+  --color-ink-500: #475569;
+  --color-ink-400: #64748b;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-300: #a5b4fc;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-violet-500: #8b5cf6;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before {
+    border-color: var(--color-slate-200, currentColor);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-ink-700);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection {
+    background: var(--color-brand-100);
+    color: var(--color-brand-700);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Motion.
+
+   Everything here is decorative. It is all disabled under
+   prefers-reduced-motion at the bottom of this file, and none of it is
+   required to read the page.
+--------------------------------------------------------------------------- */
+
+@keyframes af-rise {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@keyframes af-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+@keyframes af-orbit {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes af-drift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(24px, -18px, 0) scale(1.06); }
+  66%      { transform: translate3d(-18px, 14px, 0) scale(0.96); }
+}
+
+/* The token that runs along the pipeline in the hero. */
+@keyframes af-travel {
+  0%        { left: 0%; opacity: 0; }
+  4%        { opacity: 1; }
+  96%       { opacity: 1; }
+  100%      { left: 100%; opacity: 0; }
+}
+
+/* Each pipeline stage lights up as the token reaches it. */
+@keyframes af-stage {
+  0%, 6%    { color: var(--color-ink-400); border-color: #e2e8f0; background: #ffffff; }
+  10%, 24%  { color: var(--color-brand-700); border-color: var(--color-brand-300); background: var(--color-brand-50); }
+  30%, 100% { color: var(--color-ink-500); border-color: #e2e8f0; background: #ffffff; }
+}
+
+@keyframes af-sweep {
+  from { background-position: 200% 0; }
+  to   { background-position: -200% 0; }
+}
+
+@keyframes af-blink {
+  0%, 45%   { opacity: 1; }
+  50%, 95%  { opacity: 0.25; }
+}
+
+@keyframes af-grow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Applied by the scroll observer in components/Reveal.jsx. */
+.af-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+}
+
+.af-reveal.is-in {
+  animation: af-rise 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.af-float { animation: af-float 6s ease-in-out infinite; }
+.af-drift { animation: af-drift 18s ease-in-out infinite; }
+.af-orbit { animation: af-orbit 26s linear infinite; }
+.af-blink { animation: af-blink 1.6s steps(1, end) infinite; }
+
+.af-travel {
+  animation: af-travel 6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.af-stage {
+  animation: af-stage 6s linear infinite;
+}
+
+.af-grow {
+  transform-origin: left;
+  animation: af-grow 1.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.af-sweep {
+  background-image: linear-gradient(
+    100deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.55) 45%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  animation: af-sweep 3.4s linear infinite;
+}
+
+.af-gradient-text {
+  background-image: linear-gradient(120deg, #4f46e5, #8b5cf6 45%, #0ea5e9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Hides the scrollbar on the horizontal screenshot rail without losing scroll. */
+.af-rail {
+  scrollbar-width: none;
+}
+.af-rail::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .af-reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

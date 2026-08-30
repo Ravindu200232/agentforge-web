@@ -1,0 +1,22 @@
+{
+  "name": "agentforge-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Marketing site for AgentForge.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "team:photos": "python tools/import_team_photos.py"
+  },
+  "dependencies": {
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "tailwindcss": "^4.1.13"
+  }
+}
