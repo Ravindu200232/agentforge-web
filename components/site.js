@@ -22,7 +22,7 @@ export const REPO = {
   product: 'RP-SE-009',
 }
 
-export const INSTALLER = 'AgentForge-Setup-2.0.0.exe'
+export const INSTALLER = 'AgentForge-Setup-2.0.1.exe'
 
 export const DOWNLOAD_URL =
   `https://github.com/${REPO.owner}/${REPO.name}/releases/latest/download/${INSTALLER}`
