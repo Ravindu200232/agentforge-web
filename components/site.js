@@ -24,8 +24,16 @@ export const REPO = {
 
 export const INSTALLER = 'AgentForge-Setup-2.0.1.exe'
 
+// The installer is released beside the application it installs, not beside
+// this website: the two are versioned together, and a release that carries
+// `agentforge-app.zip` is the one the installer will fetch from.
 export const DOWNLOAD_URL =
-  `https://github.com/${REPO.owner}/${REPO.name}/releases/latest/download/${INSTALLER}`
+  `https://github.com/${REPO.owner}/${REPO.product}/releases/latest/download/${INSTALLER}`
+
+export const RELEASES_URL = `https://github.com/${REPO.owner}/${REPO.product}/releases`
+
+/** What the download weighs, so the page does not have to guess. */
+export const INSTALLER_SIZE = '79 MB'
 
 export const SOURCE_URL = `https://github.com/${REPO.owner}/${REPO.product}`
 
@@ -107,12 +115,49 @@ export const SCREENS = [
 ]
 
 export const INCLUDED = [
-  { name: 'Ollama', note: 'local models on port 11434' },
-  { name: 'MongoDB', note: 'the database behind generated apps' },
+  { name: 'Ollama', note: 'serves the models, on port 11434' },
+  { name: 'MongoDB', note: 'a local database, on port 27017' },
   { name: 'Node.js 20+', note: 'runs the Studio' },
   { name: 'Python 3.11+', note: 'runs the agents' },
   { name: 'Git', note: 'version control for what it builds' },
+  { name: 'GitHub CLI', note: 'signs in, and makes the repository a deployment pushes to' },
+  { name: 'Vercel CLI, Netlify CLI', note: 'sign in to those from the Deploy screen' },
   { name: 'All packages', note: 'pip and npm, in a private environment' },
+]
+
+/**
+ * What the first launch actually does, in the order it does it.
+ *
+ * Written as steps rather than as a paragraph because the installer shows them
+ * as steps: someone watching the window should recognise what they are seeing.
+ */
+export const FIRST_RUN = [
+  {
+    title: 'Checks the machine',
+    body: 'Every tool above is probed first. Anything already installed is left '
+        + 'exactly as it is — nothing is replaced, downgraded or reconfigured.',
+  },
+  {
+    title: 'Installs what is missing',
+    body: 'Through winget where Windows offers it, and the vendor’s own installer '
+        + 'where it does not. Each download reports its size and progress.',
+  },
+  {
+    title: 'Fetches AgentForge',
+    body: 'The application is downloaded from its latest release rather than '
+        + 'carried inside the installer, so the installer stays small and a fix '
+        + 'to the app does not mean downloading it again.',
+  },
+  {
+    title: 'Installs the packages',
+    body: 'Python packages into a private virtual environment, Studio packages '
+        + 'with npm. Nothing is installed system-wide that does not have to be.',
+  },
+  {
+    title: 'Starts it',
+    body: 'The database and the model server come up, the Studio opens, and the '
+        + 'window closes itself. The next launch skips everything already done.',
+  },
 ]
 
 export const TEAM = [

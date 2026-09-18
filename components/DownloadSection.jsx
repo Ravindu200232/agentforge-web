@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 import Button from './Button'
 import { Download, Check, Github, Windows } from './Icons'
-import { DOWNLOAD_URL, SOURCE_URL, INSTALLER, INCLUDED } from './site'
+import { DOWNLOAD_URL, SOURCE_URL, INSTALLER, INSTALLER_SIZE, INCLUDED, FIRST_RUN } from './site'
 
 /** The download call to action, and what the installer takes care of. */
 export default function DownloadSection() {
@@ -34,6 +34,22 @@ export default function DownloadSection() {
             backend and the Studio for you.
           </p>
 
+          <ol className="mt-9 space-y-5">
+            {FIRST_RUN.map((step, i) => (
+              <li key={step.title} className="flex gap-4">
+                <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/10 font-mono text-xs font-semibold text-brand-100">
+                  {i + 1}
+                </span>
+                <span>
+                  <span className="block font-semibold text-white">{step.title}</span>
+                  <span className="mt-1 block text-sm leading-relaxed text-slate-400">
+                    {step.body}
+                  </span>
+                </span>
+              </li>
+            ))}
+          </ol>
+
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button href={DOWNLOAD_URL} size="lg">
               <Download className="h-5 w-5" />
@@ -46,7 +62,7 @@ export default function DownloadSection() {
           </div>
 
           <p className="mt-5 font-mono text-xs text-slate-400">
-            {INSTALLER} · about 95 MB · free
+            {INSTALLER} · {INSTALLER_SIZE} · free
           </p>
         </Reveal>
 
