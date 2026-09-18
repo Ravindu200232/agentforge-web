@@ -122,6 +122,7 @@ export const INCLUDED = [
   { name: 'Git', note: 'version control for what it builds' },
   { name: 'GitHub CLI', note: 'signs in, and makes the repository a deployment pushes to' },
   { name: 'Vercel CLI, Netlify CLI', note: 'sign in to those from the Deploy screen' },
+  { name: 'AWS CLI, Azure CLI', note: 'sign in and deploy to either one' },
   { name: 'All packages', note: 'pip and npm, in a private environment' },
 ]
 
