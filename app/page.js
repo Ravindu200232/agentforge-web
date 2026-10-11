@@ -5,6 +5,7 @@ import Problem from '@/components/Problem'
 import Steps from '@/components/Steps'
 import Gallery from '@/components/Gallery'
 import DownloadSection from '@/components/DownloadSection'
+import Guide from '@/components/Guide'
 import Team from '@/components/Team'
 import Footer from '@/components/Footer'
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Steps />
         <Gallery />
         <DownloadSection />
+        <Guide />
         <Team />
       </main>
       <Footer />

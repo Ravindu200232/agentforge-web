@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 import Button from './Button'
 import { Download, Check, Github, Windows } from './Icons'
-import { DOWNLOAD_URL, SOURCE_URL, INSTALLER, INSTALLER_SIZE, INCLUDED, FIRST_RUN } from './site'
+import { DOWNLOAD_URL, SOURCE_URL, INSTALLER, INSTALLER_SIZE, INSTALL_SIZE, INCLUDED, FIRST_RUN } from './site'
 
 /** The download call to action, and what the installer takes care of. */
 export default function DownloadSection() {
@@ -29,9 +29,9 @@ export default function DownloadSection() {
           </h2>
 
           <p className="mt-5 max-w-lg text-lg leading-relaxed text-slate-300">
-            Run it, pick a folder, and open AgentForge. The first launch checks what is
-            already on the machine and installs only what is missing — then starts the
-            backend and the Studio for you.
+            Run it, choose a folder and press Install. It downloads AgentForge and every
+            tool it needs, about 1 GB, for your Windows account only: no administrator
+            rights, and nothing else on the PC is changed.
           </p>
 
           <ol className="mt-9 space-y-5">
@@ -62,14 +62,14 @@ export default function DownloadSection() {
           </div>
 
           <p className="mt-5 font-mono text-xs text-slate-400">
-            {INSTALLER} · {INSTALLER_SIZE} · free
+            {INSTALLER} · {INSTALLER_SIZE} installer · then downloads {INSTALL_SIZE} · free
           </p>
         </Reveal>
 
         <Reveal delay={140}>
           <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-7 backdrop-blur-sm">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-100">
-              Installed for you, if you do not have it
+              What the installer sets up
             </p>
 
             <ul className="mt-6 space-y-4">
@@ -87,8 +87,8 @@ export default function DownloadSection() {
             </ul>
 
             <p className="mt-7 border-t border-white/10 pt-5 text-sm leading-relaxed text-slate-400">
-              Anything already on the PC is left exactly as it is. Nothing is replaced,
-              downgraded or reconfigured behind your back.
+              Everything goes into AgentForge's own folder. Tools already on the PC are left
+              exactly as they are: nothing is replaced, downgraded or reconfigured.
             </p>
           </div>
         </Reveal>

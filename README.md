@@ -8,7 +8,7 @@ traceable specification, writes the application, drives a real browser over
 every journey, repairs what fails, and ships it to the cloud.
 
 - **Product source:** https://github.com/Ravindu200232/RP-SE-009
-- **Installer:** the newest release of this repository
+- **Installer:** `AgentForgeSetup.exe`, the newest release of https://github.com/Ravindu200232/agentforge-releases
 
 ## Running it
 
@@ -29,7 +29,8 @@ or from Vercel.
 | Stats | The figures in the PP2 evidence pack, read from the repository rather than estimated |
 | How it works | The six stages, each with a screenshot of that stage running |
 | Screens | Six screenshots captured from the running system on 30 August 2026 |
-| Download | The Windows installer, and the toolchain it sets up on first run |
+| Download | The Windows installer, and the tools it sets up |
+| Guide | Step by step: install, sign in, describe the app, choose a stack, connect Supabase and MongoDB, build and deploy, each with the screen it shows |
 | Team | The four people who built it |
 
 Every animation is CSS and every one of them stops under
@@ -57,6 +58,14 @@ components/site.js       all of the page's copy and figures, in one place
 components/Hero.jsx      the headline and the pipeline animation
 components/Steps.jsx     the six stages
 components/Gallery.jsx   the tabbed screenshot browser
+components/Guide.jsx     the step-by-step guide and the stack table
 components/Team.jsx      the four round portraits
 public/screenshots/      captured from the running system
+public/guide/            the guide's screens, captured from AgentForge 1.0.0
 ```
+
+## The guide's screenshots
+
+`public/guide/` was captured from AgentForge 1.0.0 on 11 October 2026, with a clean settings folder. Names and
+emails that the signed-in command line tools on that computer showed are replaced with placeholders
+(`you@example.com`, `your-github-name`), and the installer's folder shows `you` as the Windows user name.
