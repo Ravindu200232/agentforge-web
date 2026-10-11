@@ -28,7 +28,7 @@ export const metadata = {
     description:
       'One tool from the interview to the running application. Describe it, and watch every useful step.',
     type: 'website',
-    images: [asset('/screenshots/01-studio-home.jpg')],
+    images: [asset('/screenshots/interview-hotel.png')],
   },
   icons: { icon: asset('/agentforge-logo.png') },
 }

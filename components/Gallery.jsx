@@ -26,7 +26,7 @@ export default function Gallery() {
       <div className="af-rail mt-10 flex justify-start gap-2 overflow-x-auto pb-2 sm:justify-center">
         {SCREENS.map((screen, i) => (
           <button
-            key={screen.id}
+            key={screen.src}
             type="button"
             onClick={() => setActive(i)}
             aria-pressed={i === active}
@@ -53,17 +53,20 @@ export default function Gallery() {
             </span>
           </div>
 
-          <Image
-            key={shot.id}
-            src={asset(`/screenshots/${shot.id}.jpg`)}
-            alt={shot.caption}
-            width={1800}
-            height={1125}
-            sizes="(max-width: 1280px) 100vw, 1200px"
-            className="af-reveal is-in h-auto w-full"
-          />
+          <a href={asset(`/screenshots/${shot.src}`)} target="_blank" rel="noopener noreferrer"
+             aria-label={`Open full-size screenshot: ${shot.tab}`}>
+            <Image
+              key={shot.src}
+              src={asset(`/screenshots/${shot.src}`)}
+              alt={shot.caption}
+              width={shot.width}
+              height={shot.height}
+              sizes="(max-width: 1280px) 100vw, 1200px"
+              className="af-reveal is-in h-auto w-full"
+            />
+          </a>
         </div>
-        <figcaption className="mt-4 text-center text-sm text-ink-400">{shot.caption}</figcaption>
+        <figcaption className="mt-4 text-center text-sm text-ink-400">{shot.caption} Select the image to see it full size.</figcaption>
       </figure>
     </section>
   )

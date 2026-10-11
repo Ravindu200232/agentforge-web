@@ -54,9 +54,9 @@ export const PIPELINE = ['Idea', 'Plan', 'Build', 'Prove', 'Ship']
 
 export const STATS = [
   { value: 5, suffix: '', label: 'applications generated end to end' },
-  { value: 61, suffix: '', label: 'traceable requirements in one specification' },
-  { value: 104, suffix: '', label: 'unit tests passing after repair' },
-  { value: 96, suffix: '%', label: 'Lighthouse best-practices on a generated app' },
+  { value: 141, suffix: '', label: 'functional needs in the hotel specification' },
+  { value: 169, suffix: '', label: 'hotel app unit tests passing in build verification' },
+  { value: 98, suffix: '%', label: 'hotel app Lighthouse accessibility score' },
 ]
 
 export const FRAGMENTS = [
@@ -66,58 +66,67 @@ export const FRAGMENTS = [
   { n: '04', title: 'Deployment', note: 'its own tool' },
 ]
 
+export const PRODUCT_SHOTS = {
+  interview: { src: 'interview-hotel.png', width: 1911, height: 1029 },
+  specification: { src: 'specification-hotel.png', width: 1911, height: 1012 },
+  wireframes: { src: 'wireframes-hotel.png', width: 1916, height: 1010 },
+  preview: { src: 'preview-hotel.png', width: 1917, height: 1012 },
+  testing: { src: 'testing-hotel.png', width: 1919, height: 980 },
+  deployment: { src: 'deployment-hotel.png', width: 1914, height: 981 },
+}
+
 export const STEPS = [
   {
-    tag: 'Describe',
+    tag: 'Interview',
     title: 'It interviews you first',
     body: 'Not a form. The agent asks what it still needs to know, and stops when the picture is complete.',
-    detail: '27 answers over 9 questions',
-    shot: '01-studio-home',
+    detail: 'A focused conversation about the hotel app',
+    shot: PRODUCT_SHOTS.interview,
   },
   {
     tag: 'Specify',
     title: 'The answers become a specification',
     body: 'Numbered, traceable requirements against ISO/IEC/IEEE 29148, with the data model and the diagrams.',
-    detail: '61 requirements · 22 modules · 11 tables',
-    shot: '03-srs',
+    detail: '141 functional needs · 20 quality goals · 11 diagrams',
+    shot: PRODUCT_SHOTS.specification,
   },
   {
-    tag: 'Build',
-    title: 'Then it writes the application',
-    body: 'Routes, components, data access and the seed, generated to disk while you watch.',
-    detail: '56 files for one coffee-shop platform',
-    shot: '04-code',
+    tag: 'Wireframes',
+    title: 'See the screens before code is written',
+    body: 'Review the page layouts against the specification, then ask for changes before the build.',
+    detail: '30 of 30 hotel wireframes ready',
+    shot: PRODUCT_SHOTS.wireframes,
   },
   {
-    tag: 'Preview',
-    title: 'And serves it back to you, running',
-    body: 'A live preview on your own machine, with the terminal, the activity feed and the agent one click away.',
-    detail: 'localhost preview, desktop and mobile',
-    shot: '02-preview-generated-app',
+    tag: 'Build & preview',
+    title: 'Then it builds and runs your app',
+    body: 'The generated app opens in a live preview while the agent continues working on it.',
+    detail: 'The hotel app running inside AgentForge',
+    shot: PRODUCT_SHOTS.preview,
   },
   {
     tag: 'Prove',
-    title: 'A real browser walks the app',
-    body: 'Every planned journey is driven for real. What fails is analysed from the evidence and repaired.',
-    detail: '78% on round one, 100% after repair',
-    shot: '05-testing-overview',
+    title: 'The build shows what passed and what is still missing',
+    body: 'Unit and browser checks are recorded alongside unmet requirements, warnings and unavailable integrations.',
+    detail: '169/169 unit · 40/40 browser · 8 gaps recorded',
+    shot: PRODUCT_SHOTS.testing,
   },
   {
     tag: 'Ship',
-    title: 'And it goes to the cloud',
-    body: 'Infrastructure, workflows and secrets are generated, then the release runs and is checked.',
-    detail: 'Vercel, AWS EC2 or AWS ECS',
-    shot: '14-deploy-accounts-connected',
+    title: 'Review the deployment as it runs',
+    body: 'The deployment plan shows its checks and steps before the app is published.',
+    detail: 'AWS EC2 deployment starting',
+    shot: PRODUCT_SHOTS.deployment,
   },
 ]
 
 export const SCREENS = [
-  { id: '01-studio-home', tab: 'Studio', caption: 'Describe the app you want, or start from a template.' },
-  { id: '03-srs', tab: 'Specification', caption: 'A numbered SRS against ISO/IEC/IEEE 29148, generated from the interview.' },
-  { id: '04-code', tab: 'Code', caption: 'Every file the builder wrote, readable while it writes them.' },
-  { id: '02-preview-generated-app', tab: 'Preview', caption: 'The generated application running on localhost, in the same window.' },
-  { id: '05-testing-overview', tab: 'Testing', caption: 'Round-one results, the repaired suite, and what the browser probe saw.' },
-  { id: '14-deploy-accounts-connected', tab: 'Deploy', caption: 'Pick the cloud target, connect the accounts, and release.' },
+  { ...PRODUCT_SHOTS.interview, tab: 'Interview', caption: 'AgentForge asks a focused question about the hotel booking app.' },
+  { ...PRODUCT_SHOTS.specification, tab: 'Specification', caption: 'The hotel specification, with its requirements, modules and diagrams.' },
+  { ...PRODUCT_SHOTS.wireframes, tab: 'Wireframes', caption: 'The page layouts generated from the approved specification.' },
+  { ...PRODUCT_SHOTS.preview, tab: 'Live preview', caption: 'The generated hotel website running inside AgentForge.' },
+  { ...PRODUCT_SHOTS.testing, tab: 'Build verification', caption: 'Passed checks and recorded gaps, shown together.' },
+  { ...PRODUCT_SHOTS.deployment, tab: 'Deployment', caption: 'The AWS EC2 deployment plan at the start of the run.' },
 ]
 
 export const INCLUDED = [
@@ -286,8 +295,8 @@ export const GUIDE = [
       'Testing: a real browser walks every journey the specification promised. What fails is repaired, or reported as it is.',
     ],
     shots: [
-      { src: '/screenshots/03-srs.jpg', w: 1800, h: 1125, caption: 'The specification, written from the interview.' },
-      { src: '/screenshots/05-testing-overview.jpg', w: 1800, h: 1125, caption: 'The test results, layer by layer.' },
+      { src: '/screenshots/specification-hotel.png', w: 1911, h: 1012, caption: 'The hotel specification, written from the interview.' },
+      { src: '/screenshots/testing-hotel.png', w: 1919, h: 980, caption: 'Build verification, with passed checks and recorded gaps.' },
     ],
   },
   {
@@ -303,7 +312,7 @@ export const GUIDE = [
     shots: [
       { src: '/guide/github.jpg', w: 1584, h: 1008, caption: 'Settings, GitHub.' },
       { src: '/guide/vercel.jpg', w: 1584, h: 1008, caption: 'Settings, Vercel. Netlify, AWS and Azure have a page each.' },
-      { src: '/screenshots/14-deploy-accounts-connected.jpg', w: 1800, h: 1125, caption: 'The Deploy panel in a project.' },
+      { src: '/screenshots/deployment-hotel.png', w: 1914, h: 981, caption: 'The AWS EC2 deployment plan as the run starts.' },
     ],
   },
   {

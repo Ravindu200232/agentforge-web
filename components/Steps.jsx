@@ -54,15 +54,18 @@ export default function Steps() {
 
                   <div className={flipped ? 'lg:order-1' : ''}>
                     <figure className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl shadow-slate-200/60 transition-transform duration-500 hover:-translate-y-1">
-                      <Image
-                        src={asset(`/screenshots/${step.shot}.jpg`)}
-                        alt={`AgentForge — ${step.title}`}
-                        width={1800}
-                        height={1125}
-                        sizes="(max-width: 1024px) 100vw, 46vw"
-                        className="h-auto w-full"
-                        loading={i < 2 ? 'eager' : 'lazy'}
-                      />
+                      <a href={asset(`/screenshots/${step.shot.src}`)} target="_blank" rel="noopener noreferrer"
+                         aria-label={`Open full-size screenshot: ${step.title}`}>
+                        <Image
+                          src={asset(`/screenshots/${step.shot.src}`)}
+                          alt={`AgentForge — ${step.title}`}
+                          width={step.shot.width}
+                          height={step.shot.height}
+                          sizes="(max-width: 1024px) 100vw, 46vw"
+                          className="h-auto w-full"
+                          loading={i < 2 ? 'eager' : 'lazy'}
+                        />
+                      </a>
                     </figure>
                   </div>
                 </div>

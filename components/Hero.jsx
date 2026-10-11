@@ -51,10 +51,10 @@ function PipelineAnimation() {
 /** A short list of files, drawn in as if the builder were writing them. */
 function FileTicker() {
   const files = [
-    'app/api/appointments/route.js',
-    'app/(dashboard)/bookings/page.jsx',
-    'lib/db/appointments.js',
-    'tests/e2e/patient-books-a-visit.spec.js',
+    'packages/rooms/src/server.js',
+    'packages/bookings/src/server.js',
+    'packages/auth/src/models/StaffAccount.js',
+    'scripts/seed.mjs',
   ]
 
   return (
@@ -63,7 +63,7 @@ function FileTicker() {
         <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-ink-400">
           Files written
         </span>
-        <span className="font-mono text-[11px] text-ink-400">44</span>
+        <span className="font-mono text-[11px] text-ink-400">hotel app</span>
       </div>
 
       <ul className="space-y-2">
@@ -127,7 +127,7 @@ export default function Hero() {
 
           <p className="mt-5 flex items-center gap-2 text-sm text-ink-400">
             <Windows className="h-4 w-4" />
-            Free · one installer · it fetches Ollama, MongoDB, Node and Python for you
+            Free · one installer · it fetches Node.js, Python and the cloud tools for you
           </p>
         </div>
 
@@ -155,9 +155,9 @@ export default function Hero() {
 
             <div className="mt-4 grid grid-cols-3 gap-2 text-center">
               {[
-                ['61', 'requirements'],
-                ['104', 'tests passing'],
-                ['3', 'roles seeded'],
+                ['141', 'functional needs'],
+                ['169', 'unit tests passing'],
+                ['30', 'wireframes'],
               ].map(([value, label]) => (
                 <div key={label} className="rounded-xl bg-white/70 py-3 ring-1 ring-slate-200">
                   <p className="font-display text-lg font-bold text-ink-900">{value}</p>
