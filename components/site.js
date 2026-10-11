@@ -213,8 +213,8 @@ export const GUIDE = [
       'Every answer the AI gives counts as one request, up to 3,000 in the free release. Settings shows how many are left.',
     ],
     shots: [
-      { src: '/guide/signup.jpg', w: 500, h: 562, caption: 'Create an account.' },
-      { src: '/guide/signin.jpg', w: 500, h: 562, caption: 'Sign in once it is approved.' },
+      { src: '/guide/signup.png', w: 500, h: 562, caption: 'Create an account.' },
+      { src: '/guide/signin.png', w: 500, h: 562, caption: 'Sign in once it is approved.' },
     ],
   },
   {
