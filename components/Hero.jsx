@@ -99,7 +99,7 @@ export default function Hero() {
         <div>
           <span className="inline-flex items-center gap-2 rounded-full border border-brand-100 bg-brand-50 px-3.5 py-1.5 text-xs font-semibold text-brand-700">
             <span className="af-blink h-1.5 w-1.5 rounded-full bg-brand-500" />
-            Self-optimizing AI-agentic development
+            Free account · $8 cloud credit once per account
           </span>
 
           <h1 className="mt-6 font-display text-[2.6rem] font-bold leading-[1.06] tracking-tight text-ink-900 sm:text-6xl lg:text-[4.1rem]">
@@ -127,7 +127,7 @@ export default function Hero() {
 
           <p className="mt-5 flex items-center gap-2 text-sm text-ink-400">
             <Windows className="h-4 w-4" />
-            Free · one installer · it fetches Node.js, Python and the cloud tools for you
+            Free download · one installer · it fetches Node.js, Python and the cloud tools for you
           </p>
         </div>
 

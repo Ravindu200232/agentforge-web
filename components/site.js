@@ -214,16 +214,16 @@ export const GUIDE = [
   {
     id: 'guide-account',
     title: 'Create your account and sign in',
-    lead: 'AgentForge is free to use. The AI models it uses are hosted and shared, so everyone signs in with an approved account.',
+    lead: 'Create a free AgentForge account and receive $8 in cloud credit once. You can also use your own local Ollama without spending cloud credit.',
     steps: [
       'The first time it opens, choose Sign up: your name, a username, your email and a password of at least 8 characters.',
-      'The AgentForge team approves new accounts. Until then, signing in says the account is waiting for approval.',
-      'Once it is approved, sign in with your email or username and your password.',
-      'Every answer the AI gives counts as one request, up to 3,000 in the free release. Settings shows how many are left.',
+      'Your account is ready immediately with $8 in cloud credit. You can start using cloud models after signing up.',
+      'Later, sign in with your email or username and your password.',
+      'Settings shows your remaining cloud credit. Choose Local Ollama there if you want to run models on your own computer.',
     ],
     shots: [
       { src: '/guide/signup.png', w: 500, h: 562, caption: 'Create an account.' },
-      { src: '/guide/signin.png', w: 500, h: 562, caption: 'Sign in once it is approved.' },
+      { src: '/guide/signin.png', w: 500, h: 562, caption: 'Sign in with your account.' },
     ],
   },
   {
