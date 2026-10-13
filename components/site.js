@@ -33,7 +33,7 @@ export const DOWNLOAD_URL =
   `https://github.com/${REPO.owner}/${RELEASES_REPO}/releases/latest/download/${INSTALLER}`
 
 export const MAC_DOWNLOAD_URL =
-  'https://github.com/it22249166/agentforge-studio/releases/download/v1.1.0-mac/AgentForge-1.1.0-mac-arm64.dmg'
+  'https://github.com/Ravindu200232/agentforge-releases/releases/download/v1.1.0-mac/AgentForge-1.1.0-mac-arm64.dmg'
 
 export const RELEASES_URL = `https://github.com/${REPO.owner}/${RELEASES_REPO}/releases`
 

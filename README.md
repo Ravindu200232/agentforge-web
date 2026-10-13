@@ -9,7 +9,7 @@ every journey, repairs what fails, and ships it to the cloud.
 
 - **Product source:** https://github.com/Ravindu200232/RP-SE-009
 - **Windows installer:** `AgentForgeSetup.exe`, the newest release of https://github.com/Ravindu200232/agentforge-releases
-- **Mac (Apple Silicon) DMG:** https://github.com/it22249166/agentforge-studio/releases/download/v1.1.0-mac/AgentForge-1.1.0-mac-arm64.dmg
+- **Mac (Apple Silicon) DMG:** https://github.com/Ravindu200232/agentforge-releases/releases/download/v1.1.0-mac/AgentForge-1.1.0-mac-arm64.dmg
 
 ## Running it
 
