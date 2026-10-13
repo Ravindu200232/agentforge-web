@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Button from './Button'
 import { Download, Menu, Close } from './Icons'
-import { NAV, DOWNLOAD_URL, asset } from './site'
+import { NAV, asset } from './site'
 
 /** A transparent bar that gains a border and a blur once the page moves. */
 export default function Navbar() {
@@ -53,7 +53,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:block">
-          <Button href={DOWNLOAD_URL}>
+          <Button href="#download">
             <Download className="h-4 w-4" />
             Download
           </Button>
@@ -82,9 +82,9 @@ export default function Navbar() {
               {item.label}
             </a>
           ))}
-          <Button href={DOWNLOAD_URL} size="lg" className="mt-3 w-full">
+          <Button href="#download" size="lg" className="mt-3 w-full" onClick={() => setOpen(false)}>
             <Download className="h-5 w-5" />
-            Download for Windows
+            Choose a download
           </Button>
         </div>
       )}

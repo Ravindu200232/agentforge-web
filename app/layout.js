@@ -18,7 +18,7 @@ export const metadata = {
   metadataBase: new URL('https://ravindu200232.github.io/agentforge-web'),
   title: 'AgentForge — describe an app, watch it get built, tested and shipped',
   description:
-    'AgentForge interviews you, writes a traceable specification, generates the application, drives a real browser over every journey, repairs what fails and deploys it to the cloud. Free download for Windows.',
+    'AgentForge interviews you, writes a traceable specification, generates the application, drives a real browser over every journey, repairs what fails and deploys it to the cloud. Free download for Windows and Mac.',
   keywords: [
     'AgentForge', 'AI agents', 'software development', 'code generation',
     'automated testing', 'deployment', 'SRS', 'Ollama', 'Next.js',

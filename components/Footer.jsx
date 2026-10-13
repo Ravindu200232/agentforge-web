@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Github, Download } from './Icons'
-import { NAV, SOURCE_URL, DOWNLOAD_URL, asset } from './site'
+import { NAV, SOURCE_URL, asset } from './site'
 
 export default function Footer() {
   return (
@@ -36,7 +36,7 @@ export default function Footer() {
 
           <div className="flex gap-3">
             <a
-              href={DOWNLOAD_URL}
+              href="#download"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white text-ink-500 ring-1 ring-slate-200 transition-colors hover:text-brand-700 hover:ring-brand-300"
               aria-label="Download AgentForge"
             >

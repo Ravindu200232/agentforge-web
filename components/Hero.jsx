@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Button from './Button'
 import { Download, Github, Windows } from './Icons'
-import { PIPELINE, DOWNLOAD_URL, SOURCE_URL, asset } from './site'
+import { PIPELINE, DOWNLOAD_URL, MAC_DOWNLOAD_URL, SOURCE_URL, asset } from './site'
 
 /**
  * The pipeline that runs under the headline.
@@ -114,10 +114,14 @@ export default function Hero() {
             what fails and ships it to the cloud. One tool, and you watch each useful step.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button href={DOWNLOAD_URL} size="lg">
               <Download className="h-5 w-5" />
               Download for Windows
+            </Button>
+            <Button href={MAC_DOWNLOAD_URL} variant="outline" size="lg">
+              <Download className="h-5 w-5" />
+              Download for Mac
             </Button>
             <Button href={SOURCE_URL} variant="outline" size="lg">
               <Github className="h-5 w-5" />
@@ -127,7 +131,7 @@ export default function Hero() {
 
           <p className="mt-5 flex items-center gap-2 text-sm text-ink-400">
             <Windows className="h-4 w-4" />
-            Free download · one installer · it fetches Node.js, Python and the cloud tools for you
+            Free download · Windows installer or Mac (Apple Silicon) DMG
           </p>
         </div>
 

@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 import Button from './Button'
 import { Download, Check, Github, Windows } from './Icons'
-import { DOWNLOAD_URL, SOURCE_URL, INSTALLER, INSTALLER_SIZE, INSTALL_SIZE, INCLUDED, FIRST_RUN } from './site'
+import { DOWNLOAD_URL, MAC_DOWNLOAD_URL, SOURCE_URL, INSTALLER, INSTALLER_SIZE, INSTALL_SIZE, INCLUDED, FIRST_RUN } from './site'
 
 /** The download call to action, and what the installer takes care of. */
 export default function DownloadSection() {
@@ -50,10 +50,14 @@ export default function DownloadSection() {
             ))}
           </ol>
 
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <Button href={DOWNLOAD_URL} size="lg">
               <Download className="h-5 w-5" />
-              Download the installer
+              Download for Windows
+            </Button>
+            <Button href={MAC_DOWNLOAD_URL} variant="ghost" size="lg">
+              <Download className="h-5 w-5" />
+              Download for Mac
             </Button>
             <Button href={SOURCE_URL} variant="ghost" size="lg">
               <Github className="h-5 w-5" />
@@ -62,7 +66,10 @@ export default function DownloadSection() {
           </div>
 
           <p className="mt-5 font-mono text-xs text-slate-400">
-            {INSTALLER} · {INSTALLER_SIZE} installer · then downloads {INSTALL_SIZE} · free
+            Windows: {INSTALLER} · {INSTALLER_SIZE} installer · then downloads {INSTALL_SIZE} · free
+          </p>
+          <p className="mt-2 text-sm text-slate-400">
+            Mac: Apple Silicon (arm64) DMG · drag AgentForge to Applications.
           </p>
         </Reveal>
 
