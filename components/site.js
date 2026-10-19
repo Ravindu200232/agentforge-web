@@ -23,7 +23,7 @@ export const REPO = {
 }
 
 export const INSTALLER = 'AgentForgeSetup.exe'
-export const WINDOWS_VERSION = '1.0.2'
+export const WINDOWS_VERSION = '1.0.3'
 
 // The installer is released beside the application it installs, not beside
 // this website: the public agentforge-releases repository carries both, and
