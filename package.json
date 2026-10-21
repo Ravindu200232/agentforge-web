@@ -7,8 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "team:photos": "python tools/import_team_photos.py"
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "^15.5.4",

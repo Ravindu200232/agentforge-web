@@ -51,7 +51,6 @@ export const NAV = [
   { href: '#screens', label: 'Screens' },
   { href: '#download', label: 'Download' },
   { href: '#guide', label: 'Guide' },
-  { href: '#team', label: 'Team' },
 ]
 
 export const PIPELINE = ['Idea', 'Plan', 'Build', 'Prove', 'Ship']
@@ -329,24 +328,5 @@ export const GUIDE = [
       'To remove AgentForge, use Settings, Apps, Installed apps in Windows. Your projects and settings are kept.',
     ],
     shots: [],
-  },
-]
-
-export const TEAM = [
-  {
-    slug: 'ravindu-subasingha',
-    name: 'Ravindu Subasingha',
-  },
-  {
-    slug: 'nimthera-gunasena',
-    name: 'Nimthera Gunasena',
-  },
-  {
-    slug: 'hamna-rahmathullah-hakeem',
-    name: 'Hamna Rahmathullah Hakeem',
-  },
-  {
-    slug: 'malith-bandara',
-    name: 'Malith Bandara',
   },
 ]

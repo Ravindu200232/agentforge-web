@@ -32,22 +32,9 @@ or from Vercel.
 | Screens | Six screenshots captured from the running system on 30 August 2026 |
 | Download | The Windows installer and Mac (Apple Silicon) DMG, plus the tools the Windows installer sets up |
 | Guide | Step by step: install, sign in, describe the app, choose a stack, connect Supabase and MongoDB, build and deploy, each with the screen it shows |
-| Team | The four people who built it |
 
 Every animation is CSS and every one of them stops under
 `prefers-reduced-motion: reduce`. Nothing on the page plays sound.
-
-## Replacing the team photos
-
-Drop new headshots into `incoming-photos/` — any format, named so each one
-contains the person's first name — then:
-
-```bash
-npm run team:photos
-```
-
-Each photo is centre-cropped to a square, resized to 640×640 and written into
-`public/team/` under the filename the page already points at.
 
 ## Layout
 
@@ -60,7 +47,6 @@ components/Hero.jsx      the headline and the pipeline animation
 components/Steps.jsx     the six stages
 components/Gallery.jsx   the tabbed screenshot browser
 components/Guide.jsx     the step-by-step guide and the stack table
-components/Team.jsx      the four round portraits
 public/screenshots/      captured from the running system
 public/guide/            the guide's screens, captured from AgentForge 1.0.0
 ```
