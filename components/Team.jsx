@@ -10,12 +10,9 @@ export default function Team() {
         <span className="text-xs font-semibold uppercase tracking-[0.2em] text-brand-600">
           The team
         </span>
-        <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-ink-900 sm:text-[2.6rem] sm:leading-[1.15]">
-          Built by four people
-        </h2>
       </Reveal>
 
-      <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {TEAM.map((person, i) => (
           <Reveal key={person.slug} delay={i * 100}>
             <figure className="group text-center">
