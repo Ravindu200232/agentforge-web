@@ -6,7 +6,6 @@ import Steps from '@/components/Steps'
 import Gallery from '@/components/Gallery'
 import DownloadSection from '@/components/DownloadSection'
 import Guide from '@/components/Guide'
-import Team from '@/components/Team'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -21,7 +20,6 @@ export default function Home() {
         <Gallery />
         <DownloadSection />
         <Guide />
-        <Team />
       </main>
       <Footer />
     </>

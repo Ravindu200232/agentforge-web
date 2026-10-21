@@ -6,9 +6,4 @@ out/
 .env*.local
 .vercel
 
-# Drop folder for the team headshots; the README in it is tracked, the
-# photos people drop in are not.
-incoming-photos/*
-!incoming-photos/README.txt
-
 .vercel
