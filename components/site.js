@@ -23,7 +23,8 @@ export const REPO = {
 }
 
 export const INSTALLER = 'AgentForgeSetup.exe'
-export const WINDOWS_VERSION = '1.0.3'
+export const WINDOWS_VERSION = '1.0.7'
+export const MAC_VERSION = '1.0.7'
 
 // The installer is released beside the application it installs, not beside
 // this website: the public agentforge-releases repository carries both, and
@@ -34,7 +35,7 @@ export const DOWNLOAD_URL =
   `https://github.com/${REPO.owner}/${RELEASES_REPO}/releases/latest/download/${INSTALLER}`
 
 export const MAC_DOWNLOAD_URL =
-  'https://github.com/Ravindu200232/agentforge-releases/releases/download/v1.0.3-mac/AgentForge-1.0.3-mac-arm64.dmg'
+  `https://github.com/${REPO.owner}/${RELEASES_REPO}/releases/download/v${MAC_VERSION}-mac/AgentForge-${MAC_VERSION}-mac-arm64.dmg`
 
 export const RELEASES_URL = `https://github.com/${REPO.owner}/${RELEASES_REPO}/releases`
 

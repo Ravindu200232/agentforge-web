@@ -1,7 +1,7 @@
 import Reveal from './Reveal'
 import Button from './Button'
 import { Download, Check, Github, Windows } from './Icons'
-import { DOWNLOAD_URL, MAC_DOWNLOAD_URL, SOURCE_URL, INSTALLER, WINDOWS_VERSION, INSTALLER_SIZE, INSTALL_SIZE, INCLUDED, FIRST_RUN } from './site'
+import { DOWNLOAD_URL, MAC_DOWNLOAD_URL, SOURCE_URL, INSTALLER, WINDOWS_VERSION, MAC_VERSION, INSTALLER_SIZE, INSTALL_SIZE, INCLUDED, FIRST_RUN } from './site'
 
 /** The download call to action, and what the installer takes care of. */
 export default function DownloadSection() {
@@ -69,7 +69,7 @@ export default function DownloadSection() {
             Windows v{WINDOWS_VERSION}: {INSTALLER} · {INSTALLER_SIZE} installer · then downloads {INSTALL_SIZE} · free
           </p>
           <p className="mt-2 text-sm text-slate-400">
-            Mac: Apple Silicon (arm64) DMG · drag AgentForge to Applications.
+            macOS v{MAC_VERSION} · Apple Silicon (arm64) DMG · drag AgentForge to Applications.
           </p>
         </Reveal>
 
